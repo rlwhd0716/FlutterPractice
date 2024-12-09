@@ -9,7 +9,7 @@ class TimerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TimerBloc(ticker: Ticker()),
+      create: (_) => TimerBloc(ticker: const Ticker()),
       child: const TimerView(),
     );
   }
@@ -22,13 +22,13 @@ class TimerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter Time')),
-      body: Stack(
+      body: const Stack(
         children: [
-          const Background(),
+          Background(),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const <Widget>[
+            children: <Widget>[
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 100.0),
                 child: Center(child: TimerText()),
