@@ -1,7 +1,84 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+    "statsAppBarTitle": "Stats",
+    "@statsAppBarTitle": {
+        "description": "Text shown in the AppBar of the Stats Page"
+    },
+    "statsCompletedTodoCountLabel": "Complete Todos",
+    "@statsCompletedTodoCountLabel": {
+        "description": "Text shown in the Complete of the Stats Page"
+    },
+    "statsActiveTodoCountLabel": "Activate Todos",
+    "@statsActiveTodoCountLabel": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "editTodoAddAppBarTitle": "Activate Todos",
+    "@editTodoAddAppBarTitle": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "editTodoEditAppBarTitle": "Activate Todos",
+    "@editTodoEditAppBarTitle": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "editTodoSaveButtonTooltip": "Activate Todos",
+    "@editTodoSaveButtonTooltip": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "editTodoTitleLabel": "Activate Todos",
+    "@editTodoTitleLabel": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "editTodoDescriptionLabel": "Activate Todos",
+    "@editTodoDescriptionLabel": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewAppBarTitle": "Activate Todos",
+    "@todosOverviewAppBarTitle": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewErrorSnackbarText": "Activate Todos",
+    "@todosOverviewErrorSnackbarText": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewTodoDeletedSnackbarText": "Todos OverView",
+    "todosOverviewUndoDeletionButtonText": "Activate Todos",
+    "@todosOverviewUndoDeletionButtonText": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewEmptyText": "Activate Todos",
+    "@todosOverviewEmptyText": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewFilterTooltip": "Activate Todos",
+    "@todosOverviewFilterTooltip": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewFilterAll": "Activate Todos",
+    "@todosOverviewFilterAll": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewFilterActiveOnly": "Activate Todos",
+    "@todosOverviewFilterActiveOnly": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewFilterCompletedOnly": "Activate Todos",
+    "@todosOverviewFilterCompletedOnly": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewOptionsTooltip": "Activate Todos",
+    "@todosOverviewOptionsTooltip": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewOptionsMarkAllIncomplete": "Activate Todos",
+    "@todosOverviewOptionsMarkAllIncomplete": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewOptionsMarkAllComplete": "Activate Todos",
+    "@todosOverviewOptionsMarkAllComplete": {
+        "description": "Text shown in the Activate of the Stats Page"
+    },
+    "todosOverviewOptionsClearCompleted": "Activate Todos",
+    "@todosOverviewOptionsClearCompleted": {
+        "description": "Text shown in the Activate of the Stats Page"
     }
 }
