@@ -12,72 +12,75 @@
     "@statsActiveTodoCountLabel": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "editTodoAddAppBarTitle": "Activate Todos",
+    "editTodoAddAppBarTitle": "Add Todo",
     "@editTodoAddAppBarTitle": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "editTodoEditAppBarTitle": "Activate Todos",
+    "editTodoEditAppBarTitle": "Edit Todo",
     "@editTodoEditAppBarTitle": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "editTodoSaveButtonTooltip": "Activate Todos",
+    "editTodoSaveButtonTooltip": "editTodoSaveButtonTooltip",
     "@editTodoSaveButtonTooltip": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "editTodoTitleLabel": "Activate Todos",
+    "editTodoTitleLabel": "Title",
     "@editTodoTitleLabel": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "editTodoDescriptionLabel": "Activate Todos",
+    "editTodoDescriptionLabel": "Description",
     "@editTodoDescriptionLabel": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewAppBarTitle": "Activate Todos",
+    "todosOverviewAppBarTitle": "Flutter Todos",
     "@todosOverviewAppBarTitle": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewErrorSnackbarText": "Activate Todos",
+    "todosOverviewErrorSnackbarText": "todosOverviewErrorSnackbarText",
     "@todosOverviewErrorSnackbarText": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewTodoDeletedSnackbarText": "Todos OverView",
-    "todosOverviewUndoDeletionButtonText": "Activate Todos",
+    "todosOverviewTodoDeletedSnackbarText": "Delete \"\"",
+    "@todosOverviewTodoDeletedSnackbarText": {
+        "description": "Todos OverView"
+    },
+    "todosOverviewUndoDeletionButtonText": "Undo",
     "@todosOverviewUndoDeletionButtonText": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewEmptyText": "Activate Todos",
+    "todosOverviewEmptyText": "todosOverviewEmptyText",
     "@todosOverviewEmptyText": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewFilterTooltip": "Activate Todos",
+    "todosOverviewFilterTooltip": "todosOverviewFilterTooltip",
     "@todosOverviewFilterTooltip": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewFilterAll": "Activate Todos",
+    "todosOverviewFilterAll": "Show All",
     "@todosOverviewFilterAll": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewFilterActiveOnly": "Activate Todos",
+    "todosOverviewFilterActiveOnly": "Show Activate",
     "@todosOverviewFilterActiveOnly": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewFilterCompletedOnly": "Activate Todos",
+    "todosOverviewFilterCompletedOnly": "Show Complete",
     "@todosOverviewFilterCompletedOnly": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewOptionsTooltip": "Activate Todos",
+    "todosOverviewOptionsTooltip": "todosOverviewOptionsTooltip",
     "@todosOverviewOptionsTooltip": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewOptionsMarkAllIncomplete": "Activate Todos",
+    "todosOverviewOptionsMarkAllIncomplete": "Mark all InComplete",
     "@todosOverviewOptionsMarkAllIncomplete": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewOptionsMarkAllComplete": "Activate Todos",
+    "todosOverviewOptionsMarkAllComplete": "Mark all Complete",
     "@todosOverviewOptionsMarkAllComplete": {
         "description": "Text shown in the Activate of the Stats Page"
     },
-    "todosOverviewOptionsClearCompleted": "Activate Todos",
+    "todosOverviewOptionsClearCompleted": "Clear Completed",
     "@todosOverviewOptionsClearCompleted": {
         "description": "Text shown in the Activate of the Stats Page"
     }

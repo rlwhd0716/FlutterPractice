@@ -64,9 +64,8 @@ class TodosOverviewView extends StatelessWidget {
                 ..showSnackBar(
                   SnackBar(
                     content: Text(
-                      l10n.todosOverviewTodoDeletedSnackbarText(
-                        deletedTodo.title,
-                      ),
+                      l10n.todosOverviewTodoDeletedSnackbarText,
+                      // (deletedTodo.title,),
                     ),
                     action: SnackBarAction(
                       label: l10n.todosOverviewUndoDeletionButtonText,
