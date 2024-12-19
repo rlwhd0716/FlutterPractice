@@ -40,7 +40,7 @@ class LocalStorageTodosApi extends TodosApi {
       final todos = List<Map<dynamic, dynamic>>.from(
         json.decode(todosJson) as List,
       )
-          .map((jsonMap) => Todo.fromJson(Map<String, dynamic>.from(jsonMap)))
+          .map((jsonMap) => Todo.fromJson(Map<String, Object?>.from(jsonMap)))
           .toList();
       _todoStreamController.add(todos);
     } else {

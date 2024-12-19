@@ -22,7 +22,7 @@ class TodosOverviewFilterButton extends StatelessWidget {
       onSelected: (filter) {
         context
             .read<TodosOverviewBloc>()
-            .add(TodosOverviewFilterChanged(filter));
+            .add(TodosOverviewEvent.todosOverviewFilterChanged(filter: filter));
       },
       itemBuilder: (context) {
         return [

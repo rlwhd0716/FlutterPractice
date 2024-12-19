@@ -14,7 +14,9 @@ class TodosOverviewPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => TodosOverviewBloc(
         todosRepository: context.read<TodosRepository>(),
-      )..add(const TodosOverviewSubscriptionRequested()),
+      )..add(
+          const TodosOverviewEvent.todosOverviewSubscriptionRequested(),
+        ),
       child: const TodosOverviewView(),
     );
   }
@@ -71,9 +73,10 @@ class TodosOverviewView extends StatelessWidget {
                       label: l10n.todosOverviewUndoDeletionButtonText,
                       onPressed: () {
                         messenger.hideCurrentSnackBar();
-                        context
-                            .read<TodosOverviewBloc>()
-                            .add(const TodosOverviewUndoDeletionRequested());
+                        context.read<TodosOverviewBloc>().add(
+                              const TodosOverviewEvent
+                                  .todosOverviewUndoDeletionRequested(),
+                            );
                       },
                     ),
                   ),
@@ -107,16 +110,19 @@ class TodosOverviewView extends StatelessWidget {
                     todo: todo,
                     onToggleCompleted: (isCompleted) {
                       context.read<TodosOverviewBloc>().add(
-                            TodosOverviewTodoCompletionToggled(
+                            TodosOverviewEvent
+                                .todosOverviewTodoCompletionToggled(
                               todo: todo,
                               isCompleted: isCompleted,
                             ),
                           );
                     },
                     onDismissed: (_) {
-                      context
-                          .read<TodosOverviewBloc>()
-                          .add(TodosOverviewTodoDeleted(todo));
+                      context.read<TodosOverviewBloc>().add(
+                            TodosOverviewEvent.todosOverviewTodoDeleted(
+                              todo: todo,
+                            ),
+                          );
                     },
                     onTap: () {
                       Navigator.of(context).push(

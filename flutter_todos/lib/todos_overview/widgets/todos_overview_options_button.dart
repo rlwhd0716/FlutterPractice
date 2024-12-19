@@ -25,13 +25,14 @@ class TodosOverviewOptionsButton extends StatelessWidget {
       onSelected: (options) {
         switch (options) {
           case TodosOverviewOption.toggleAll:
-            context
-                .read<TodosOverviewBloc>()
-                .add(const TodosOverviewToggleAllRequested());
+            context.read<TodosOverviewBloc>().add(
+                  const TodosOverviewEvent.todosOverviewToggleAllRequested(),
+                );
           case TodosOverviewOption.clearCompleted:
-            context
-                .read<TodosOverviewBloc>()
-                .add(const TodosOverviewClearCompletedRequested());
+            context.read<TodosOverviewBloc>().add(
+                  const TodosOverviewEvent
+                      .todosOverviewClearCompletedRequested(),
+                );
         }
       },
       itemBuilder: (context) {

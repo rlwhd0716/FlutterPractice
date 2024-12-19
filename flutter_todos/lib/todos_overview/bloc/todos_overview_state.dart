@@ -2,41 +2,25 @@ part of 'todos_overview_bloc.dart';
 
 enum TodosOverviewStatus { initial, loading, success, failure }
 
-final class TodosOverviewState extends Equatable {
-  const TodosOverviewState({
-    this.status = TodosOverviewStatus.initial,
-    this.todos = const [],
-    this.filter = TodosViewFilter.all,
-    this.lastDeletedTodo,
-  });
+@freezed
+class TodosOverviewState with _$TodosOverviewState {
+  const TodosOverviewState._(); // custom getter 추가를 위한 비공개 빈 생성자
 
-  final TodosOverviewStatus status;
-  final List<Todo> todos;
-  final TodosViewFilter filter;
-  final Todo? lastDeletedTodo;
+  const factory TodosOverviewState({
+    required TodosOverviewStatus status,
+    required List<Todo> todos,
+    required TodosViewFilter filter,
+    required Todo? lastDeletedTodo,
+  }) = _TodosOverviewState;
 
   Iterable<Todo> get filteredTodos => filter.applyAll(todos);
 
-  TodosOverviewState copyWith({
-    TodosOverviewStatus Function()? status,
-    List<Todo> Function()? todos,
-    TodosViewFilter Function()? filter,
-    Todo? Function()? lastDeletedTodo,
-  }) {
-    return TodosOverviewState(
-      status: status != null ? status() : this.status,
-      todos: todos != null ? todos() : this.todos,
-      filter: filter != null ? filter() : this.filter,
-      lastDeletedTodo:
-          lastDeletedTodo != null ? lastDeletedTodo() : this.lastDeletedTodo,
+  factory TodosOverviewState.initial() {
+    return const TodosOverviewState(
+      status: TodosOverviewStatus.initial,
+      todos: const [],
+      filter: TodosViewFilter.all,
+      lastDeletedTodo: null,
     );
   }
-
-  @override
-  List<Object?> get props => [
-        status,
-        todos,
-        filter,
-        lastDeletedTodo,
-      ];
 }
