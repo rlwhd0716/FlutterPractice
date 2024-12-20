@@ -9,35 +9,16 @@ extension EditTodoStatusX on EditTodoStatus {
       ].contains(this);
 }
 
-final class EditTodoState extends Equatable {
-  const EditTodoState({
-    this.status = EditTodoStatus.initial,
-    this.initialTodo,
-    this.title = '',
-    this.description = '',
-  });
+@freezed
+class EditTodoState with _$EditTodoState {
+  const EditTodoState._(); // custom getter 추가를 위한 비공개 빈 생성자
 
-  final EditTodoStatus status;
-  final Todo? initialTodo;
-  final String title;
-  final String description;
+  const factory EditTodoState({
+    @Default(EditTodoStatus.initial) EditTodoStatus status,
+    Todo? initialTodo,
+    @Default('') String title,
+    @Default('') String description,
+  }) = _EditTodoState;
 
   bool get isNewTodo => initialTodo == null;
-
-  EditTodoState copyWith({
-    EditTodoStatus? status,
-    Todo? initialTodo,
-    String? title,
-    String? description,
-  }) {
-    return EditTodoState(
-      status: status ?? this.status,
-      initialTodo: initialTodo ?? this.initialTodo,
-      title: title ?? this.title,
-      description: description ?? this.description,
-    );
-  }
-
-  @override
-  List<Object?> get props => [status, initialTodo, title, description];
 }

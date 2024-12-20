@@ -11,16 +11,21 @@ class TodosOverviewBloc extends Bloc<TodosOverviewEvent, TodosOverviewState> {
   TodosOverviewBloc({
     required TodosRepository todosRepository,
   })  : _todosRepository = todosRepository,
-        super(TodosOverviewState.initial()) {
+        super(const TodosOverviewState()) {
     on<TodosOverviewEvent>((event, emit) {
       event.map(
-        todosOverviewSubscriptionRequested: (_) => _onSubscriptionRequested,
-        todosOverviewTodoCompletionToggled: (_) => _onTodoCompletionToggled,
-        todosOverviewTodoDeleted: (_) => _onTodoDeleted,
-        todosOverviewUndoDeletionRequested: (_) => _onUndoDeletionRequested,
-        todosOverviewFilterChanged: (_) => _onFilterChanged,
-        todosOverviewToggleAllRequested: (_) => _onToggleAllRequested,
-        todosOverviewClearCompletedRequested: (_) => _onClearCompletedRequested,
+        todosOverviewSubscriptionRequested: (event) =>
+            _onSubscriptionRequested(event, emit),
+        todosOverviewTodoCompletionToggled: (event) =>
+            _onTodoCompletionToggled(event, emit),
+        todosOverviewTodoDeleted: (event) => _onTodoDeleted(event, emit),
+        todosOverviewUndoDeletionRequested: (event) =>
+            _onUndoDeletionRequested(event, emit),
+        todosOverviewFilterChanged: (event) => _onFilterChanged(event, emit),
+        todosOverviewToggleAllRequested: (event) =>
+            _onToggleAllRequested(event, emit),
+        todosOverviewClearCompletedRequested: (event) =>
+            _onClearCompletedRequested(event, emit),
       );
     });
   }

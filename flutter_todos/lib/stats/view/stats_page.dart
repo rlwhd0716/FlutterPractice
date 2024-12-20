@@ -12,7 +12,7 @@ class StatsPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => StatsBloc(
         todosRepository: context.read<TodosRepository>(),
-      )..add(const StatsSubscriptionRequested()),
+      )..add(const StatsEvent.statsSubscriptionRequested()),
       child: const StatsView(),
     );
   }

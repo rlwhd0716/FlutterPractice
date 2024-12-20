@@ -60,7 +60,9 @@ class EditTodoView extends StatelessWidget {
         ),
         onPressed: status.isLoadingOrSuccess
             ? null
-            : () => context.read<EditTodoBloc>().add(const EditTodoSubmitted()),
+            : () => context
+                .read<EditTodoBloc>()
+                .add(const EditTodoEvent.submitted()),
         child: status.isLoadingOrSuccess
             ? const CupertinoActivityIndicator()
             : const Icon(Icons.check_rounded),
@@ -102,7 +104,11 @@ class _TitleField extends StatelessWidget {
         FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9\s]')),
       ],
       onChanged: (value) {
-        context.read<EditTodoBloc>().add(EditTodoTitleChanged(value));
+        context.read<EditTodoBloc>().add(
+              EditTodoEvent.titleChanged(
+                title: value,
+              ),
+            );
       },
     );
   }
@@ -132,7 +138,11 @@ class _DescriptionField extends StatelessWidget {
         LengthLimitingTextInputFormatter(300),
       ],
       onChanged: (value) {
-        context.read<EditTodoBloc>().add(EditTodoDescriptionChanged(value));
+        context.read<EditTodoBloc>().add(
+              EditTodoEvent.descriptionChanged(
+                description: value,
+              ),
+            );
       },
     );
   }

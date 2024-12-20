@@ -1577,17 +1577,19 @@ class __$$TodosOverviewStateImplCopyWithImpl<$Res>
 
 class _$TodosOverviewStateImpl extends _TodosOverviewState {
   const _$TodosOverviewStateImpl(
-      {required this.status,
-      required final List<Todo> todos,
-      required this.filter,
-      required this.lastDeletedTodo})
+      {this.status = TodosOverviewStatus.initial,
+      final List<Todo> todos = const [],
+      this.filter = TodosViewFilter.all,
+      this.lastDeletedTodo = null})
       : _todos = todos,
         super._();
 
   @override
+  @JsonKey()
   final TodosOverviewStatus status;
   final List<Todo> _todos;
   @override
+  @JsonKey()
   List<Todo> get todos {
     if (_todos is EqualUnmodifiableListView) return _todos;
     // ignore: implicit_dynamic_type
@@ -1595,8 +1597,10 @@ class _$TodosOverviewStateImpl extends _TodosOverviewState {
   }
 
   @override
+  @JsonKey()
   final TodosViewFilter filter;
   @override
+  @JsonKey()
   final Todo? lastDeletedTodo;
 
   @override
@@ -1632,10 +1636,10 @@ class _$TodosOverviewStateImpl extends _TodosOverviewState {
 
 abstract class _TodosOverviewState extends TodosOverviewState {
   const factory _TodosOverviewState(
-      {required final TodosOverviewStatus status,
-      required final List<Todo> todos,
-      required final TodosViewFilter filter,
-      required final Todo? lastDeletedTodo}) = _$TodosOverviewStateImpl;
+      {final TodosOverviewStatus status,
+      final List<Todo> todos,
+      final TodosViewFilter filter,
+      final Todo? lastDeletedTodo}) = _$TodosOverviewStateImpl;
   const _TodosOverviewState._() : super._();
 
   @override
