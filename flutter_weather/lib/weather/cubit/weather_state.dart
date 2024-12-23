@@ -9,35 +9,24 @@ extension WeatherStatusX on WeatherStatus {
   bool get isFailure => this == WeatherStatus.failure;
 }
 
-@JsonSerializable()
-final class WeatherState extends Equatable {
-  WeatherState({
-    this.status = WeatherStatus.initial,
-    this.temperatureUnits = TemperatureUnits.celsius,
+@freezed
+class WeatherState with _$WeatherState {
+  const WeatherState._(); // custom getter 추가를 위한 비공개 빈 생성자
+
+  factory WeatherState({
+    required WeatherStatus status,
+    required TemperatureUnits temperatureUnits,
     Weather? weather,
-  }) : weather = weather ?? Weather.empty;
+  }) = _WeatherState;
 
   factory WeatherState.fromJson(Map<String, dynamic> json) =>
       _$WeatherStateFromJson(json);
 
-  final WeatherStatus status;
-  final Weather weather;
-  final TemperatureUnits temperatureUnits;
-
-  WeatherState copyWith({
-    WeatherStatus? status,
-    TemperatureUnits? temperatureUnits,
-    Weather? weather,
-  }) {
+  factory WeatherState.initial() {
     return WeatherState(
-      status: status ?? this.status,
-      temperatureUnits: temperatureUnits ?? this.temperatureUnits,
-      weather: weather ?? this.weather,
+      status: WeatherStatus.initial,
+      temperatureUnits: TemperatureUnits.celsius,
+      weather: Weather.empty(),
     );
   }
-
-  Map<String, dynamic> toJson() => _$WeatherStateToJson(this);
-
-  @override
-  List<Object?> get props => [status, temperatureUnits, weather];
 }

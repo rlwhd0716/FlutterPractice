@@ -6,39 +6,21 @@ part of 'weather_cubit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-WeatherState _$WeatherStateFromJson(Map<String, dynamic> json) =>
-    $checkedCreate(
-      'WeatherState',
-      json,
-      ($checkedConvert) {
-        final val = WeatherState(
-          status: $checkedConvert(
-              'status',
-              (v) =>
-                  $enumDecodeNullable(_$WeatherStatusEnumMap, v) ??
-                  WeatherStatus.initial),
-          temperatureUnits: $checkedConvert(
-              'temperature_units',
-              (v) =>
-                  $enumDecodeNullable(_$TemperatureUnitsEnumMap, v) ??
-                  TemperatureUnits.celsius),
-          weather: $checkedConvert(
-              'weather',
-              (v) => v == null
-                  ? null
-                  : Weather.fromJson(v as Map<String, dynamic>)),
-        );
-        return val;
-      },
-      fieldKeyMap: const {'temperatureUnits': 'temperature_units'},
+_$WeatherStateImpl _$$WeatherStateImplFromJson(Map<String, dynamic> json) =>
+    _$WeatherStateImpl(
+      status: $enumDecode(_$WeatherStatusEnumMap, json['status']),
+      temperatureUnits:
+          $enumDecode(_$TemperatureUnitsEnumMap, json['temperatureUnits']),
+      weather: json['weather'] == null
+          ? null
+          : Weather.fromJson(json['weather'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$WeatherStateToJson(WeatherState instance) =>
+Map<String, dynamic> _$$WeatherStateImplToJson(_$WeatherStateImpl instance) =>
     <String, dynamic>{
       'status': _$WeatherStatusEnumMap[instance.status]!,
-      'weather': instance.weather.toJson(),
-      'temperature_units':
-          _$TemperatureUnitsEnumMap[instance.temperatureUnits]!,
+      'temperatureUnits': _$TemperatureUnitsEnumMap[instance.temperatureUnits]!,
+      'weather': instance.weather,
     };
 
 const _$WeatherStatusEnumMap = {
